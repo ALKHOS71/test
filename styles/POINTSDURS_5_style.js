@@ -10,15 +10,15 @@ var style_POINTSDURS_5 = function(feature, resolution){
     var labelText = "";
     size = 0;
     var labelFont = "10.4px \'Arial\', sans-serif";
-    var labelFill = "#d80606";
+    var labelFill = "#000000";
     var bufferColor = "#ffffff";
-    var bufferWidth = 1.5;
+    var bufferWidth = 1.5000000000000002;
     var textAlign = "left";
     var offsetX = 8;
     var offsetY = 3;
     var placement = 'point';
-    if ("" !== null) {
-        labelText = String("");
+    if (feature.get("ID") !== null) {
+        labelText = String(feature.get("ID"));
     }
     var style = [ new ol.style.Style({
         image: new ol.style.RegularShape({radius: 6.0 + size, points: 3,
